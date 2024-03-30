@@ -87,7 +87,7 @@ public class OpenIdProvider {
         clientAuth = new ClientSecretBasic(clientId, new Secret(config.getString(Keys.OPENID_CLIENT_SECRET)));
 
         baseUrl = new URI(WebHelper.retrieveWebUrl(config));
-        callbackUrl = new URI(WebHelper.retrieveWebUrl(config) + "/api/session/openid/callback");
+        callbackUrl = new URI(WebHelper.retrieveWebUrl(config) + "/ct-api/session/openid/callback");
 
         if (config.hasKey(Keys.OPENID_ISSUER_URL)) {
             HttpRequest httpRequest = HttpRequest.newBuilder(

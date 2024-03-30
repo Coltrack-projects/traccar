@@ -151,7 +151,7 @@ public class WebServer implements LifecycleObject {
             }
             servletHandler.setWelcomeFiles(new String[] {"release.html", "index.html"});
         }
-        servletHandler.addServlet(servletHolder, "/*");
+        servletHandler.addServlet(servletHolder, "/ct/*");
     }
 
     private void initApi(ServletContextHandler servletHandler) {
